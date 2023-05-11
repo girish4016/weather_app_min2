@@ -1,0 +1,245 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    color: white;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: linear-gradient( #0d335e,#294769,#5a738f);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wapinfo{
+    width: 35%;
+    min-width: 320px;
+    max-width: 100rem;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.heading_wap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-transform: uppercase;
+    margin-bottom: 10%;
+    margin-top: 7%;
+}
+
+.location_tabs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2%;
+    margin-bottom: 10%;
+}
+
+
+/* ye class add krne par your location / search location par css lagegi */
+.active_button{
+    background-color: rgba(199, 199, 199, 0.507);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.ask_permission{
+    visibility: hidden;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location_acess{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 10%;
+}
+
+.ask_permission h2{
+    margin-bottom: 5%;
+}
+.ask_permission p{
+    margin-bottom: 10%;
+}
+.grant_permission{
+    padding: 15px;
+    display: flex;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.401);
+    border: 0;
+    box-shadow: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+
+
+
+.loading{
+    display: none;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    width: 20%;
+}
+
+.search_bar{
+    width: 100%;
+    display: none;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    margin-bottom: 10%;
+}
+.city_name{
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.358);
+    border-radius: 7px;
+    height:30px;
+    width: 90%;
+    max-width: 91%;
+    margin-right: 5px;
+    font-size: large;
+    padding-left: 5px;
+}
+
+.search_button{
+    height: 100%;
+    width: 30px;
+    /* border-radius: 360px; */
+    /* background-color: rgba(255, 255, 255, 0.797); */
+}
+
+
+
+
+.weather_details{
+    display: none;
+    visibility: hidden;
+    /* display: flex; */
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/* search bar activate karne ke liye */
+.active{
+    display: flex;
+    visibility: visible;
+}
+
+
+/* weather details display krne ke liye ye properties include krni padegi */
+/* .active_weather{
+    display: flex;
+    visibility: visible;
+} */
+/* use .active  */
+
+
+.country{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+.country_name{
+    font-weight: 300;
+    font-size: 25px;
+    margin-right: 5px;
+}
+.country_flag{
+    width: 30px;
+    height: 30px;
+}
+
+.weather_type{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+.weather_name{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    /* margin-bottom: 3%; */
+}
+.weather_symbol{
+    height: 70px;
+    width: 70px;
+}
+
+
+.temperature{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.more_details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2%;
+}
+
+.windspeed_container, .humidity_container, .clouds_container{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 7px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: rgba(255, 255, 255, 0.26);
+    border-radius: 5px;
+}
+
+.windspeed_img, .humidity_img, .clouds_img{
+    height: 50px;
+    width: 50px;
+}
+@media ( max-width: 960px ){
+    .windspeed_container, .humidity_container, .clouds_container{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 5px;
+        font-size: small;
+        background-color: rgba(255, 255, 255, 0.26);
+    }
+}
