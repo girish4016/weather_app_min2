@@ -20,9 +20,11 @@ function getLocation(){
 }
 
 async function updateposition(pos){
-    console.log(pos);
-    lat = pos.coords.latitude;
-    long = pos.coords.longitude;
+    console.log('vo');
+    if(pos){
+        lat = pos.coords.latitude;
+        long = pos.coords.longitude;
+    }
     console.log(lat);
     console.log(long);
     document.querySelector('.ask_permission').classList.remove('active');
@@ -69,6 +71,9 @@ function updateweather(data){
     document.querySelector('.weather_name').innerHTML = data?.weather?.[0]?.main;
     document.querySelector('.weather_symbol').src = `https://openweathermap.org/img/w/${data?.weather?.[0]?.icon}.png`;
     document.querySelector('.temperature').innerHTML = (data?.main?.temp - 273).toFixed(1);    
+    document.querySelector('.windspeed').innerHTML = data?.wind?.speed + " "+'m/s';
+    document.querySelector('.humidity').innerHTML = data?.main?.humidity +'%';
+    document.querySelector('.clouds').innerHTML = data?.clouds?.all +'%';
 }
 
 let myLocation = document.querySelector('.your_location');
@@ -89,7 +94,7 @@ function mylocmode(){
     navigator.permissions.query({name: 'geolocation'}).then(
         function(result){
             if(result.state=='granted'){console.log('click');
-                setWeather();
+                updateposition();
             }
             else{
                 document.querySelector('.ask_permission').classList.add('active');
