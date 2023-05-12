@@ -30,6 +30,8 @@ async function updateposition(pos){
 }
 
 async function setWeather(){
+    if(weatherBox.classList.contains('active'))
+    weatherBox.classList.remove('active');
     showGif();
     let val = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=c6eb2c2a10e3ac84df3f2efa6566a178`);
     let data = await val.json();
@@ -40,6 +42,8 @@ async function setWeather(){
 
 async function setWeathercity(){
     let city = document.querySelector('.city_name').value.toLowerCase();
+    if(weatherBox.classList.contains('active'))
+    weatherBox.classList.remove('active');
     if(city==='')return;
     showGif();
     let val = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c6eb2c2a10e3ac84df3f2efa6566a178`);
