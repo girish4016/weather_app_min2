@@ -17,6 +17,7 @@
     background-image: linear-gradient( #0d335e,#294769,#5a738f);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: scroll;
 }
 
 .wapinfo{
